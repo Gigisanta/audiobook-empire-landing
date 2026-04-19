@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audiobook Empire — Premium Self-Improvement & Business Audiobooks</title>
+    <meta name="description" content="Transform your life with timeless wisdom from James Allen's 'As A Man Thinketh' and P.T. Barnum's 'The Art of Money Getting.' Premium audiobooks for just $4.97 each.">
+    <meta name="keywords" content="audiobooks, self-help, personal development, business, money, James Allen, P.T. Barnum">
+    <meta name="author" content="Audiobook Empire">
+    <meta property="og:title" content="Audiobook Empire — Premium Self-Improvement & Business Audiobooks">
+    <meta property="og:description" content="Transform your life with timeless wisdom. Premium audiobooks for just $4.97 each.">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="canonical" href="https://giolivo.gumroad.com">
+    <style>
+        :root {
+            --primary: #6366f1;
+            --primary-dark: #4f46e5;
+            --secondary: #f59e0b;
+            --dark: #1e1b4b;
+            --light: #f8fafc;
+            --gray: #64748b;
+            --success: #10b981;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            line-height: 1.6;
+            color: #334155;
+            background: var(--light);
+        }
+        
+        /* Header */
+        header {
+            background: linear-gradient(135deg, var(--dark) 0%, #312e81 100%);
+            color: white;
+            padding: 3rem 1rem;
+            text-align: center;
+        }
+        
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        header .tagline {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        /* Hero */
+        .hero {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: white;
+            padding: 4rem 1rem;
+            text-align: center;
+        }
+        
+        .hero h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .hero p {
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto 2rem;
+            opacity: 0.95;
+        }
+        
+        .price-highlight {
+            font-size: 3rem;
+            font-weight: bold;
+            color: var(--secondary);
+        }
+        
+        /* Products Grid */
+        .products {
+            padding: 3rem 1rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .products h2 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            color: var(--dark);
+        }
+        
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+        
+        .product-card {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(0,0,0,0.12);
+        }
+        
+        .product-cover {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 12px;
+            margin: 1rem;
+            width: calc(100% - 2rem);
+        }
+        
+        .product-info {
+            padding: 1.5rem;
+        }
+        
+        .product-info h3 {
+            font-size: 1.4rem;
+            color: var(--dark);
+            margin-bottom: 0.5rem;
+        }
+        
+        .product-author {
+            color: var(--gray);
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+        }
+        
+        .product-description {
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .product-features {
+            list-style: none;
+            margin-bottom: 1.5rem;
+        }
+        
+        .product-features li {
+            padding: 0.4rem 0;
+            font-size: 0.9rem;
+        }
+        
+        .product-features li::before {
+            content: "✓ ";
+            color: var(--success);
+            font-weight: bold;
+        }
+        
+        .product-price {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+        
+        .btn {
+            display: inline-block;
+            width: 100%;
+            padding: 1rem 2rem;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            text-align: center;
+            transition: transform 0.2s;
+        }
+        
+        .btn:hover {
+            transform: scale(1.02);
+        }
+        
+        .btn-secondary {
+            background: var(--secondary);
+        }
+        
+        /* Bundle Section */
+        .bundle {
+            background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+            padding: 4rem 1rem;
+            text-align: center;
+        }
+        
+        .bundle h2 {
+            font-size: 2rem;
+            color: var(--dark);
+            margin-bottom: 1rem;
+        }
+        
+        .bundle-description {
+            max-width: 600px;
+            margin: 0 auto 2rem;
+            font-size: 1.1rem;
+            color: #444;
+        }
+        
+        .bundle-price {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: var(--dark);
+            margin-bottom: 0.5rem;
+        }
+        
+        .bundle-savings {
+            color: #166534;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+        
+        .btn-bundle {
+            background: var(--dark);
+            color: white;
+            display: inline-block;
+            padding: 1rem 3rem;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1.2rem;
+            transition: transform 0.2s;
+        }
+        
+        .btn-bundle:hover {
+            transform: scale(1.05);
+        }
+        
+        /* Testimonials */
+        .testimonials {
+            padding: 4rem 1rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .testimonials h2 {
+            text-align: center;
+            font-size: 2rem;
+            color: var(--dark);
+            margin-bottom: 2rem;
+        }
+        
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .testimonial {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+        }
+        
+        .testimonial-quote {
+            font-style: italic;
+            font-size: 1rem;
+            margin-bottom: 1rem;
+            color: #444;
+        }
+        
+        .testimonial-author {
+            font-weight: 600;
+            color: var(--dark);
+            font-size: 0.9rem;
+        }
+        
+        .testimonial-source {
+            color: var(--gray);
+            font-size: 0.85rem;
+        }
+        
+        /* Features */
+        .features {
+            background: white;
+            padding: 4rem 1rem;
+        }
+        
+        .features-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .features h2 {
+            text-align: center;
+            font-size: 2rem;
+            color: var(--dark);
+            margin-bottom: 2rem;
+        }
+        
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        
+        .feature {
+            text-align: center;
+        }
+        
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .feature h3 {
+            color: var(--dark);
+            margin-bottom: 0.5rem;
+        }
+        
+        /* FAQ */
+        .faq {
+            padding: 4rem 1rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .faq h2 {
+            text-align: center;
+            font-size: 2rem;
+            color: var(--dark);
+            margin-bottom: 2rem;
+        }
+        
+        .faq-item {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin-bottom: 1rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+        }
+        
+        .faq-question {
+            font-weight: 600;
+            color: var(--dark);
+            margin-bottom: 0.5rem;
+        }
+        
+        .faq-answer {
+            color: var(--gray);
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 2rem 1rem;
+            text-align: center;
+        }
+        
+        footer p {
+            opacity: 0.8;
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive */
+        @media (max-width: 640px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+            
+            .hero h2 {
+                font-size: 1.5rem;
+            }
+            
+            .price-highlight {
+                font-size: 2.5rem;
+            }
+            
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>🎧 Audiobook Empire</h1>
+        <p class="tagline">Timeless wisdom, narrated for your success</p>
+    </header>
+    
+    <section class="hero">
+        <h2>Transform Your Life with Classic Wisdom</h2>
+        <p>Two legendary self-help and business books — now available as premium audiobooks. Listen anywhere, learn everywhere.</p>
+        <div class="price-highlight">$4.97 each</div>
+    </section>
+    
+    <section class="products">
+        <h2>📚 Featured Audiobooks</h2>
+        <div class="product-grid">
+            <!-- Product 1: As A Man Thinketh -->
+            <div class="product-card">
+                <img src="https://archive.org/download/as_a_man_thinketh_1312_librivox/as_man_thinketh3_1401.jpg" alt="As A Man Thinketh Audiobook Cover" class="product-cover">
+                <div class="product-info">
+                    <h3>As A Man Thinketh</h3>
+                    <p class="product-author">by James Allen</p>
+                    <p class="product-description">The classic text on the power of thought. Discover how your mind shapes your destiny.</p>
+                    <ul class="product-features">
+                        <li>The Power of Thought — Your mind is your greatest asset</li>
+                        <li>Character is Fate — Transform yourself from within</li>
+                        <li>Cause and Effect — Why circumstances follow thinking</li>
+                        <li>~30 minutes of life-changing content</li>
+                        <li>Instant MP3 download</li>
+                    </ul>
+                    <div class="product-price">$4.97</div>
+                    <a href="https://giolivo.gumroad.com/l/uzkywg" class="btn">Get the Audiobook</a>
+                    <audio controls style="width:100%; margin-top:0.75rem; border-radius:8px;">
+                        <source src="https://archive.org/download/as_a_man_thinketh_1312_librivox/asamanthinketh_0_allen_64kb.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+            </div>
+
+            <!-- Product 2: The Art of Money Getting -->
+            <div class="product-card">
+                <img src="https://archive.org/download/art_of_money_getting_librivox/Art_Money_Getting_1210.jpg" alt="The Art of Money Getting Audiobook Cover" class="product-cover">
+                <div class="product-info">
+                    <h3>The Art of Money Getting</h3>
+                    <p class="product-author">by P.T. Barnum</p>
+                    <p class="product-description">Battle-tested financial wisdom from the legendary showman who built a fortune.</p>
+                    <ul class="product-features">
+                        <li>Choose Your Profession Wisely</li>
+                        <li>Business Secrets of the Masters</li>
+                        <li>The Power of Concentration</li>
+                        <li>12 Golden Rules of Money</li>
+                        <li>~40 minutes of financial wisdom</li>
+                    </ul>
+                    <div class="product-price">$4.97</div>
+                    <a href="https://giolivo.gumroad.com/l/zcyaq" class="btn">Get the Audiobook</a>
+                    <audio controls style="width:100%; margin-top:0.75rem; border-radius:8px;">
+                        <source src="https://archive.org/download/art_of_money_getting_librivox/artofmoneygetting_00_barnum_64kb.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Bundle Section -->
+    <section class="bundle">
+        <h2>💎 Best Value: The Complete Collection</h2>
+        <p class="bundle-description">Get BOTH audiobooks and save over 50%! This is the ultimate self-improvement bundle for anyone serious about success.</p>
+        <div class="bundle-price">$19.97</div>
+        <p class="bundle-savings">Save $9.97 — Get both audiobooks!</p>
+        <a href="https://giolivo.gumroad.com/l/kynbgz" class="btn-bundle">Get the Complete Bundle</a>
+    </section>
+    
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <h2>⭐ What Successful People Say</h2>
+        <div class="testimonial-grid">
+            <div class="testimonial">
+                <p class="testimonial-quote">"Simply revolutionary. I applied Barnum's advice on concentration and my income increased 40% in 3 months."</p>
+                <p class="testimonial-author">— Miguel Rodríguez</p>
+                <p class="testimonial-source">From The Art of Money Getting</p>
+            </div>
+            <div class="testimonial">
+                <p class="testimonial-quote">"I've been in finance for 15 years and Barnum's principles are still relevant today."</p>
+                <p class="testimonial-author">— Carlos Sánchez</p>
+                <p class="testimonial-source">From The Art of Money Getting</p>
+            </div>
+            <div class="testimonial">
+                <p class="testimonial-quote">"As a man thinketh in his heart, so is he. This book changed my entire perspective on life."</p>
+                <p class="testimonial-author">— Verified Buyer</p>
+                <p class="testimonial-source">From As A Man Thinketh</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Features -->
+    <section class="features">
+        <div class="features-container">
+            <h2>🎁 Why Choose Audiobook Empire?</h2>
+            <div class="feature-grid">
+                <div class="feature">
+                    <div class="feature-icon">⏱️</div>
+                    <h3>Listen Anywhere</h3>
+                    <p>MP3 format works on phones, tablets, computers, and cars.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">📥</div>
+                    <h3>Instant Delivery</h3>
+                    <p>Download immediately after purchase. No waiting.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">🔄</div>
+                    <h3>Lifetime Access</h3>
+                    <p>Listen unlimited times. Your purchase is forever.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">💯</div>
+                    <h3>7-Day Guarantee</h3>
+                    <p>If you're not satisfied, contact us for a full refund.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- FAQ -->
+    <section class="faq">
+        <h2>❓ Frequently Asked Questions</h2>
+        <div class="faq-item">
+            <p class="faq-question">How do I receive the audiobook after purchase?</p>
+            <p class="faq-answer">After completing your purchase on Gumroad, you'll receive an email with download links immediately. You can also access your files anytime from your Gumroad library.</p>
+        </div>
+        <div class="faq-item">
+            <p class="faq-question">What format is the audiobook?</p>
+            <p class="faq-answer">High-quality MP3 files that are compatible with all devices — smartphones, tablets, computers, car stereos, and dedicated MP3 players.</p>
+        </div>
+        <div class="faq-item">
+            <p class="faq-question">Can I listen unlimited times?</p>
+            <p class="faq-answer">Yes! Once you purchase, the audiobook is yours forever. Listen as many times as you want.</p>
+        </div>
+        <div class="faq-item">
+            <p class="faq-question">Is there a refund policy?</p>
+            <p class="faq-answer">Yes, we offer a 7-day money-back guarantee. If you're not satisfied with your purchase, contact us and we'll issue a full refund.</p>
+        </div>
+    </section>
+    
+    <footer>
+        <p>© 2026 Audiobook Empire. All rights reserved.</p>
+        <p>Powered by Gumroad</p>
+    </footer>
+</body>
+</html>
