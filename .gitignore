@@ -1,0 +1,13 @@
+*.mp3
+*.wav
+*.ogg
+*.flac
+data/
+scripts/
+logs/
+api/
+src/
+*.pyc
+__pycache__/
+.env
+*.log
